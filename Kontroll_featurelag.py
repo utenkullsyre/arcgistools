@@ -1,4 +1,15 @@
-﻿import urllib2, json, urllib, datetime, time, smtplib
+﻿#-------------------------------------------------------------------------------
+# Name:        Kontroll av featurelag
+# Purpose:     Et script som skal kontrollere et featurelag etter endringer og så sende en epost med oppdatering
+#
+# Author:      tobors
+#
+# Created:     18.01.2018
+# Copyright:   (c) tobors 2018
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+
+import urllib2, json, urllib, datetime, time, smtplib
 from datetime import timedelta
 from time import strftime
 
