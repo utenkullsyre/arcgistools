@@ -68,6 +68,7 @@ oidList = []
 ##params = {'f': 'pjson', 'where': "1=1", 'outfields' : '{0},{1}'.format(uniqueID, dateField), 'returnGeometry' : 'false', 'token' : token}  #med pålogging
 params = {'f': 'pjson', 'where': "1=1", 'outfields' : '{0},{1}'.format(uniqueID, dateField), 'returnGeometry' : 'false'}    #uten pålogging
 print u"----------Kjører spørring mot featurelag-------------\n\n"
+#TODO: Bytt ut urllib med requests, og lev lengre
 req = urllib2.Request(URL, urllib.urlencode(params))
 response = urllib2.urlopen(req)
 data = json.load(response)
@@ -88,6 +89,7 @@ else:       #hvis ikke går scriptet videre for å kontrollere når det siste ob
 
 ##else:   #hvis scriptet ikke har token så hopper det over til å sende en feilmelding til epostmottaker     #med pålogging
 ##    pass
+
 
 def sendEmail():    #funksjon for å sende e-post
     message = 'Subject: {}\n\n{}'.format(SUBJECT, TEXT).decode('utf-8')
